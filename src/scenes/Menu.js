@@ -1,3 +1,6 @@
+//responsbile for the menu cut scene
+
+
 class Menu extends Phaser.Scene{
     constructor(){
         super("menuScene")

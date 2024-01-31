@@ -1,3 +1,7 @@
+//the class play is responsible for all of the physics and movement wtihin this game
+
+
+
 class Play extends Phaser.Scene{
     constructor(){
         super("playScene")
