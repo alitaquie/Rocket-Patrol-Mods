@@ -8,8 +8,10 @@ class Menu extends Phaser.Scene{
 
     preload() {
         // load images/tile sprites
+        // this.load.image('fireball','./assets/fireball.png') //particle image
         this.load.image('rocket', './assets/rocket.png')
-        this.load.image('spaceship', './assets/spaceship.png')
+        this.load.image('spaceship', './assets/spaceship.png') //spaceship image
+        this.load.image('golden', './assets/golden.png') //spaceship image
         this.load.image('starfield', './assets/starfield.png')
         this.load.spritesheet('explosion', './assets/explosion.png', {
             frameWidth: 64,
