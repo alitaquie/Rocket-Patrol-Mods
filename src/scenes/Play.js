@@ -98,17 +98,33 @@ class Play extends Phaser.Scene{
              },
              callBackScope: this,
              loop: true
-         });
+         })
+
+         let musicConfig = {
+            volume:0.5,
+            loop:true
+         }
+
+         this.music = this.sound.add('music',musicConfig)
+
+         if(!this.gameOver){
+            this.music.play()
+         }
+         else{
+            this.music.stop()
+         }
 
     }
 
     update() {
         // check key input for restart
         if (this.gameOver && Phaser.Input.Keyboard.JustDown(keyRESET)) {
+            this.music.stop();
             this.scene.restart();
         }
     
         if (this.gameOver && Phaser.Input.Keyboard.JustDown(keyLEFT)) {
+            this.music.stop()
             this.scene.start("menuScene");
         }
     
